@@ -1,0 +1,6 @@
+{
+  "name": "Portfolio",
+  "tagline": "",
+  "body": "#Udacity Portfilo Project \r\n\r\n**Used the Foundation framework\r\n\r\nIn folder build a version with minified css/js and compressed images can be found \r\nIn folder dist an unminified and uncompressed version can be found \r\n\r\n\r\n\r\nUsed grunt-responsive-images for image resizing and \r\ngrunt-contrib-copy for distribution due to the gulp watch bug for new/deleted files on windows machines\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
