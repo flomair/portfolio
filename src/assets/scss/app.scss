@@ -1,23 +1,17 @@
 @charset 'utf-8';
 @import 'settings';
 @import 'foundation';
-//@import 'motion-ui';
 @include foundation-global-styles;
-//@include foundation-grid;
-@include foundation-flex-grid;
-@include foundation-flex-classes;
+@include foundation-grid;
+
 @include foundation-typography;
-//@include foundation-float-classes;
-//@include motion-ui-transitions;
-//@include motion-ui-animations;
+
 a {
     color: $dark-gray;
-    // box-sizing:border-box;-box;
 }
 
 img {
     width: 100%;
-    //  border: 0 none;
 }
 
 .container {
@@ -30,10 +24,12 @@ img {
     // background-color: red;
     margin: 25px 0 26px;
     padding-top: 20px;
+
     @include breakpoint(medium down) {
         margin: 10px 0 12px;
         padding-top: 10px;
     }
+
     @include breakpoint(small down) {
         margin: 10px 0 0px;
         padding-top: 10px;
@@ -51,14 +47,15 @@ img {
 .title-b,
 .title-s {
     text-align: right;
+    text-transform: uppercase;
 }
 
 .title-b {
     font-size: 4em;
     font-weight: 300;
     margin: 0;
-    text-transform: uppercase;
     line-height: 0.9em;
+
     @include breakpoint(small down) {
         font-size: 2.4em;
     }
@@ -68,7 +65,7 @@ img {
     font-weight: 400;
     font-size: 1.3em;
     margin-top: 0.5em;
-    text-transform: uppercase;
+  
     @include breakpoint(medium down) {
         margin-top: 0em;
         font-size: 1.1em;
@@ -76,18 +73,17 @@ img {
     }
 }
 
-.centerimg img {
-    width: 100%;
-}
 
 .feats-head {
     color: $medium-gray;
     font-size: 3em;
     font-weight: 400;
     padding: 26px 0 0;
+
     @include breakpoint(medium down) {
         text-align: center;
     }
+
     @include breakpoint(small down) {
         font-size: 2em;
     }
@@ -106,6 +102,7 @@ img {
     display: block;
     margin: 0 auto;
     max-width: 360px;
+
     @include breakpoint(small down) {
         max-width: 70%;
     }
@@ -116,7 +113,6 @@ img {
 }
 
 .feat-tit-b {
-    color: #676858;
     font-size: 1.8em;
     font-weight: 400;
     margin-bottom: 0;
@@ -125,22 +121,10 @@ img {
         font-size: 1.5em;
     }
 }
-
-.header {
-    // background-color: green;
+.feat-tit-s {
+	font-size: 1.4em;
 }
 
-.leftbar {
-    background-color: red;
-}
 
-.main {
-    background-color: grey;
-    height: 100%;
-}
-
-.feat-box p {
-    text-align: center;
-}
 
 

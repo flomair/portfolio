@@ -63,34 +63,6 @@ module.exports = function(grunt) {
                     { expand: true, flatten: true, src: ['src/assets/img/*'], dest: 'dist/assets/img/', filter: 'isFile' }
                 ],
             },
-        },
-        responsive_images_extender: {
-            complete: {
-                options: {
-                    separator: '@',
-                    baseDir: 'build',
-                    srcAttribute: 'smallest',
-                    sizes: [{
-                        selector: '.article-img',
-                        sizeList: [{
-                            cond: 'max-width: 30em',
-                            size: '100vw'
-                        }, {
-                            cond: 'max-width: 50em',
-                            size: '50vw'
-                        }, {
-                            cond: 'default',
-                            size: 'calc(33vw - 100px)'
-                        }]
-                    }]
-                },
-                files: [{
-                    expand: true,
-                    src: ['src/assets/pages/*.{html,htm,php}'],
-                    cwd: 'src/',
-                    dest: 'build/'
-                }]
-            }
         }
 
     });
