@@ -24,9 +24,12 @@ function loadConfig() {
   return yaml.load(ymlFile);
 }
 
+if(PRODUCTION){
+  PATHS.dist = PATHS.build;
+}
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
+ gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy)));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -65,13 +68,14 @@ function resetPages(done) {
 }
 
 // Generate a style guide from the Markdown content and HTML template in styleguide/
+/*
 function styleGuide(done) {
   sherpa('src/styleguide/index.md', {
     output: PATHS.dist + '/styleguide.html',
     template: 'src/styleguide/template.html'
   }, done);
 }
-
+*/
 // Compile Sass into CSS
 // In production, the CSS is compressed
 function sass() {
